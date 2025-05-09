@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+</head>
+<body>
+  <h1>Welcome to the Home Page</h1>
+  <p>You are logged in.</p>
+  <button id="logoutBtn">Log Out</button>
+
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+      
+      alert("You have been logged out.");
+      window.location.href = "login.html"; 
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WOAH SO EMO</title>
+  <style>
+    body {
+      background-color: #000000;
+      font-family: Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000000;
+      background-image: url('https://t3.ftcdn.net/jpg/02/89/42/70/360_F_289427042_Q4tqOQpUQs0REeZJdnJra8QUbEpL9TNQ.jpg');
+    background-attachment: fixed;
+    background-size: 1920px 960px;
+    }
+    .login-container {
+      background-color: rgb(0, 0, 0);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 360px;
+      text-align: center;
+    }
+    .login-container h1 {
+      color: #1877f2;
+      font-size: 36px;
+      margin-bottom: 20px;}
+
+    .login-container input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: 1px solid #000000;
+      border-radius: 6px;
+      font-size: 16px;}
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background-color: #000000;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;}
+
+    .login-container button:hover {
+      background-color: #ff1717;}
+    div{size: 200px;}
+    label{color: white;}
+    h2{color: white;}
+  </style>
+</head>
+<body>
+    <div class="login-container">
+  <h2>Login</h2>
+  <form id="login-container">
+    <label for="username">Username:</label><br/>
+    <input type="text" id="username" required><br/>
+    <label for="password">Password:</label><br/>
+    <input type="password" id="password" required><br/><br/>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+  <script>
+    document.getElementById("login-container").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Simulate login success
+      const username = document.getElementById("username").value;
+      localStorage.setItem("loggedInUser", username);
+
+      // Redirect to home page
+      window.location.href = "scratch.html";
+    });
+
+    // If already logged in, redirect to home
+    if (localStorage.getItem("loggedInUser")) {
+      window.location.href = "scratch.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Login | Bookface</title>
+ <style>
+     body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+      .conainer{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+     .logo{
+        font-size: 48px;
+        color: #1877f2;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+     .subtitle{
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #1c1e21; 
+        border-radius: 8px;       
+    }
+     .login-box{
+        background-color: white;
+        padding: 20px 16px;
+        width: 360px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);        
+     }
+     .login-box input{
+        width: 100%;
+        padding: 14px;
+        margin: 6px 0;
+        border: solid#dddfe2;
+        border-radius: 6px;
+        font-size: 16px;
+     }
+     .lohin-box input[type=submit]:hover{
+        background-color: #166fe5;
+     }
+     .forgot{
+        text-align: center;
+        margin-top: 12px;        
+     }
+     .forgot a{
+        color: #1877f2;
+        text-decoration: none;
+        font-size: 14px;        
+     }
+     .forgot a:hover{
+        text-decoration: underline;
+     }
+     .divider{
+        height: 1px;
+        color: #dadde1;
+        margin: 20px 0;
+     }
+     .create-account{
+        background-color: #42b74a;
+        color: white;
+        font-weight: bold;
+        padding: 12px;
+        text-align: center;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 0 auto;
+        width: 60%;
+     }
+     .create-account:hover{
+        background-color: #36a420;
+     }
+     @media (max-width: 400px) {
+      .login-box {
+        width: 90%;
+      }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Bookface</div>
+        <div class="subtitle">Connect with friends</div>
+        <div class="login-box"></div>
+         <form>
+            <input type="text" placeholder="Email or phone number" required/>
+            <input type="text" placeholder="Password" required/>
+            <input type="submit" value="Log in" />
+         </form>
+        <div class="forgot">
+            <a href="#">Forgot password?</a>
+        </div>
+        <div class="divider"></div>    
+        <div class="create-account">Create new account</div>        
+        </div>
+</body>
+</html>
